@@ -20,27 +20,10 @@ def method(x, y, z):
     pass
 
 
-method(7, 1, z=2)
-
-movies = []
-for md in movies_list:
-    m = MovieResult(**md)
-    movies.append(m)
-
-# movies = []
-# for md in movies_list:
-#     m = MovieResult(
-#         imdb_code=md.get('imdb_code'),
-#         title=md.get('title'),
-#         duration=md.get('duration'),
-#         director=md.get('director'),
-#         year=md.get('year', 0),
-#         rating=md.get('year', 0),
-#         imdb_score=md.get('imdb_score', 0.0),
-#         keywords=md.get('keywords'),
-#         genres=md.get('genres')
-#     )
-#     movies.append(m)
+movies = [
+    MovieResult(**md)
+    for md in movies_list
+]
 
 print("Found {} movies for search {}".format(len(movies), search))
 for m in movies:
