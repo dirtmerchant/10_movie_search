@@ -8,7 +8,7 @@ MovieResult = collections.namedtuple(
 
 
 def find_movies(search_text):
-    url = 'http://movie_service.talkpython.fm/api/search/{}'.format(search)
+    url = 'http://movie_service.talkpython.fm/api/search/{}'.format(search_text)
 
     resp = requests.get(url)
     resp.raise_for_status()
